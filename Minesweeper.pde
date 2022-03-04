@@ -8,7 +8,7 @@ private ArrayList <MSButton> mines = new ArrayList <MSButton>(); //ArrayList of 
 
 void setup ()
 {
-  size(900, 930);
+  size(700, 730);
   textAlign(CENTER, CENTER);
 
   // make the manager
@@ -39,15 +39,15 @@ public void draw ()
 {
   background(133, 129, 127);
   fill(255);
-  text("Mines: " + mineCount, 860, 20); // CODE BOMBS MINES - NUMFLAGGED
+  text("Mines: " + mineCount, 660, 20); // CODE BOMBS MINES - NUMFLAGGED
   if (isWon() == true) {
     displayWinningMessage();
     fill(3, 252, 240);
-    text("You Win!", 450, 20);
+    text("You Win!", 350, 20);
   }
   if (isWon() == false && end == true) {
     fill(255, 0, 0);
-    text("You Lose!", 450, 17);
+    text("You Lose!", 350, 17);
   }
 }
 public boolean isWon()
@@ -92,8 +92,8 @@ public class MSButton
 
   public MSButton ( int row, int col )
   {
-    width = 900/NUM_COLS;
-    height = 900/NUM_ROWS;
+    width = 700/NUM_COLS;
+    height = 700/NUM_ROWS;
     myRow = row;
     myCol = col; 
     x = myCol*width;
